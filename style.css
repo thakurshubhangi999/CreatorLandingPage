@@ -1,0 +1,225 @@
+/* CSS code here  */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+:root {
+  --text: #ffffff;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #6ca4eb;
+}
+.flex-r {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.flex-c {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container {
+  padding: 10px 40px;
+  max-width: 1400px;
+  height: 100%;
+  margin: 0px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #6ca4eb;
+}
+
+/* nav*/
+nav {
+  width: 100%;
+  padding: 10px 10px;
+  justify-content: space-between !important;
+  height: 10vh;
+}
+
+.nav-logo {
+  color: var(--text);
+  letter-spacing: 2px;
+}
+.nav-link {
+  gap: 0px 15px;
+}
+
+.nav-link a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 17px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.nav-link .btn {
+  margin-left: 30px;
+}
+
+.btn {
+  border: none;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background-color: rgb(36, 10, 133);
+  background: linear-gradient(
+    90deg,
+    #031c4d 0%,
+    rgba(63, 0, 156, 0.92) 164.26%
+  );
+  color: var(--text);
+  padding: 9px 12px;
+  border-radius: 10px;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+.ham {
+  background: url(https://i.ibb.co/HrfVRcx/menu.png);
+  width: 25px;
+  height: 20px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  display: none;
+}
+
+/* main */
+
+main {
+  height: 80vh;
+  width: 100%;
+  justify-content: space-between !important;
+}
+
+.main-text {
+  align-items: flex-start;
+  gap: 5px 0px;
+  max-width: 500px;
+  padding: 10px 0px;
+}
+
+.main-img img {
+  width: 600px;
+}
+
+.lg-head {
+  font-size: 50px;
+  color: var(--text);
+  letter-spacing: 1px;
+  line-height: 1;
+}
+
+.lg-color {
+  color: #031c4d;
+}
+
+.para {
+  font-size: 17px;
+  color: var(--text);
+  letter-spacing: 1px;
+}
+
+main .para {
+  margin-bottom: 20px;
+}
+
+
+/* Media queries  */
+
+@media (max-width: 1098px) {
+  .main-text {
+    max-width: 450px;
+  }
+  .container {
+    padding: 10px 20px;
+  }
+  .lg-head {
+    font-size: 40px;
+  }
+  .main-img img {
+    width: 400px;
+  }
+}
+
+@media (max-width: 798px) {
+  .main-text {
+    max-width: 430px;
+  }
+  .container {
+    padding: 10px 10px;
+    margin: 0px auto;
+  }
+  .lg-head {
+    font-size: 35px;
+  }
+  .main-img img {
+    width: 400px;
+  }
+  main {
+    position: relative;
+  }
+  .main-img {
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    transform: translate(40%, -50%);
+  }
+}
+
+@media (max-width: 634px) {
+  .main-text {
+    max-width: 430px;
+    align-items: center !important;
+  }
+  .container {
+    padding: 10px 10px;
+  }
+  .lg-head {
+    font-size: 35px;
+    text-align: center;
+  }
+  .para {
+    text-align: center;
+  }
+  .main-img img {
+    width: 400px;
+  }
+  main {
+    justify-content: center !important;
+  }
+  .main-img {
+    display: none;
+  }
+  .ham {
+    display: block;
+  }
+  .nav-link {
+    display: none;
+  }
+}
+
+@media (max-width: 340px) {
+  .lg-head {
+    font-size: 30px;
+  }
+}
